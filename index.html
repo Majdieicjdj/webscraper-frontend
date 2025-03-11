@@ -1,0 +1,80 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Web Scraper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">AI-Powered Web Scraper</h1>
+            <p class="subtitle">Extract data from any website with just a few clicks</p>
+        </header>
+        
+        <main>
+            <section class="card">
+                <div class="url-input-container">
+                    <input type="text" id="url-input" class="url-input" placeholder="Enter website URL" autocomplete="off">
+                </div>
+                
+                <div class="scrape-options">
+                    <div class="option-title">Select elements to scrape:</div>
+                    <div class="toggle-container">
+                        <button class="toggle-btn" data-element="h1">H1 Headings</button>
+                        <button class="toggle-btn" data-element="h2">H2 Headings</button>
+                        <button class="toggle-btn" data-element="h3">H3 Headings</button>
+                        <button class="toggle-btn" data-element="p">Paragraphs</button>
+                        <button class="toggle-btn" data-element="a">Links</button>
+                        <button class="toggle-btn" data-element="img">Images</button>
+                        <button class="toggle-btn" data-element="table">Tables</button>
+                        <button class="toggle-btn" data-element="div">Divs</button>
+                        <button class="toggle-btn" data-element="span">Spans</button>
+                        <button class="toggle-btn" data-element="ul">Lists</button>
+                    </div>
+                    
+                    <div class="select-options">
+                        <button id="select-all" class="select-btn">Select All</button>
+                        <button id="select-none" class="select-btn">Select None</button>
+                    </div>
+                </div>
+                
+                <div class="action-btns">
+                    <button id="scrape-btn" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Scrape Data
+                    </button>
+                    <button id="download-word-btn" class="btn btn-secondary" disabled>
+                        <i class="fas fa-file-word"></i> Download Word
+                    </button>
+                    <button id="download-pdf-btn" class="btn btn-secondary" disabled>
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </button>
+                </div>
+            </section>
+            
+            <div id="loading-indicator" class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            
+            <section class="card">
+                <h2 class="section-title">Data Preview</h2>
+                <div id="preview-section" class="preview-container">
+                    <div class="placeholder-message">
+                        <i class="fas fa-database"></i>
+                        <p>Enter a URL and click "Scrape Data" to see results</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Powered by advanced AI and web scraping technology</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
